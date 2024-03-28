@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cads.css')}}">
+  <title>Acesso Clientes</title>
+</head>
+<body>
+
+  <div class="login-box">
+
+    <div class="form_wrapper">
+      <div class="form_container">
+        <div class="title_container">
+          <h2>Login</h2>
+          {% if form.email.errors and 'Email não cadastrado.' not in form.email.errors %}
+              <span style="color: red;">Por favor, insira um email válido.</span>
+          {% endif %}
+          {% if 'Email não cadastrado.' in form.email.errors %}
+              <span style="color: red;">Email não cadastrado.</span>
+          {% endif %}
+        </div>
+        <div class="row clearfix">
+          <div class="">
+            <form method="POST">
+              {{ form.csrf_token }}
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                {{ form.email.label }} {{ form.email(size=20, placeholder="Email", class="email_field") }}
+            
+              </div>
+              {{ form.submit(class="button") }}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

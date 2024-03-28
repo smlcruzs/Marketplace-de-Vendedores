@@ -1,0 +1,88 @@
+
+.l-grade{
+  margin-top: 25rem;
+}
+.grade {
+  margin-top: 14rem;
+}
+.l-wrap {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+   
+}
+
+.m-wrap {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+   
+}
+
+.t-wrap {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+ right: 77px;
+  
+   
+}
+
+
+.line{
+  top: 100px;
+  content:'' ;
+  height: 3px;
+  width: 100%;
+  display: block;
+background-color: rgb(252, 252, 252);
+
+
+
+}
+.line-l{
+  top: 100px;
+  content:'' ;
+  height: 3px;
+  width: 100%;
+  display: block;
+background-color:#00FF08;
+
+
+
+}
+
+
+.line-u{
+  top: 100px;
+  content:'' ;
+  height: 3px;
+  width: 100%;
+  display: block;
+background-color: rgb(252, 252, 252);
+}
+
+.grid-item {
+  width: calc((100% - 24px * 2) / 3);
+  margin-top: 24px;
+  margin-right: 24px;
+  float: left;
+  
+  
+}
+
+/* For a 3-column grid */
+.grid-item:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+ 
+}
+/* Demo purposes */
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  text-align: center;
+  background-color: #00FF08;;
+}

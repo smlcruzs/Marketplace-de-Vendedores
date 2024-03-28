@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cads.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form_wrapper">
+        <div class="form_container">
+          <div class="title_container">
+            <h2>Registro</h2>
+          </div>
+          <div class="row clearfix">
+            <div class="">
+              <form method="POST" action="{{ url_for('cadastros') }}">
+                {{ form.csrf_token }}
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  {{ form.email.label }} {{ form.email }}
+                </div>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  {{ form.telefone.label }} {{ form.telefone }}
+                </div>
+                <div class="row clearfix">
+                  <div class="col_half">
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                      {{ form.nome.label }} {{ form.nome }}
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                      {{ form.sobrenome.label }} {{ form.sobrenome }}
+                    </div>
+                  </div>
+                </div>
+                <div class="input_field radio_option">
+                  {% for subfield in form.genero %}
+                    {{ subfield }} {{ subfield.label }}
+                  {% endfor %}
+                </div>
+                <input class="button" type="submit" value="Register" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
