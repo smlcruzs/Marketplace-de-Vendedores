@@ -2,6 +2,10 @@
 .l-grade{
   margin-top: 25rem;
 }
+.m-grade{
+margin-top: 18rem;
+
+}
 .grade {
   margin-top: 14rem;
 }
@@ -62,6 +66,7 @@ background-color:#00FF08;
 background-color: rgb(252, 252, 252);
 }
 
+
 .grid-item {
   width: calc((100% - 24px * 2) / 3);
   margin-top: 24px;
@@ -85,4 +90,40 @@ background-color: rgb(252, 252, 252);
   height: 80px;
   text-align: center;
   background-color: #00FF08;;
+}
+
+.grid-item-link{
+  width: calc((150% - 24px * 2) / 3);
+  margin-top: 24px;
+  margin-right: 298px;
+  float: right ;
+
+}
+.grid-item-link:nth-child(3n+3) {
+  margin-right: 0;
+  float: right;
+ 
+}
+/* Demo purposes */
+.grid-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  text-align: center;
+  background-color: #00FF08;;
+}
+
+@media screen and (max-width: 1020px) {
+
+
+  .grid-item-link{
+    width: calc((150% - 24px * 2) / 3);
+    margin-top: 24px;
+    margin-right: 90px;
+    float: right ;
+  
+  }
+
+
 }
